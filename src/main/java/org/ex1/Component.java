@@ -9,6 +9,13 @@ public class Component extends Subject {
     private Integer price;
     private Integer stock;
 
+    public Component(String name, String description, Integer price){
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.stock = 1000;
+    }
+
     public void stockArrive(Integer quantity){
         this.stock = quantity;
         notificar();

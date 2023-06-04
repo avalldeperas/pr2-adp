@@ -1,11 +1,17 @@
 package org.ex1;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class UnregisteredUser extends Client implements Observer {
 
     private String email;
+
+    public UnregisteredUser(String dni, String name) {
+        super(dni, name);
+    }
 
     @Override
     public void update(Subject subject) {
