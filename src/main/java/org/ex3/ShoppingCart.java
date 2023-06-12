@@ -2,6 +2,8 @@ package org.ex3;
 
 import lombok.Data;
 import org.ex1.Client;
+import org.ex4.ComponentsInCartIterator;
+import org.ex4.Tuple;
 
 import java.util.Date;
 import java.util.Iterator;
@@ -12,6 +14,7 @@ public abstract class ShoppingCart {
     private Date date;
     private Integer hour;
     private List<ComponentInShoppingCart> cartComponents;
+    private ComponentsInCartIterator components;
     private Client client;
     private DiscountStrategy strategy;
 
@@ -34,5 +37,10 @@ public abstract class ShoppingCart {
         return strategy.applyDiscount(price);
     }
 
-    public abstract Iterator<ComponentInShoppingCart> waitingComponents();
+    public Iterator<ComponentInShoppingCart> cartComponents(){
+        return components;
+    }
+
+    public abstract List<Tuple<String, Integer>> getWaitingCartComponents();
+
 }

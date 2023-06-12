@@ -1,15 +1,14 @@
 package org.ex4;
 
-import org.ex3.ComponentInShoppingCart;
 import org.ex3.ShoppingCart;
 
-import java.util.Collections;
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Served extends ShoppingCart {
 
     @Override
-    public Iterator<ComponentInShoppingCart> waitingComponents() {
-        return Collections.emptyIterator();
+    public List<Tuple<String, Integer>> getWaitingCartComponents() {
+        return new ArrayList<>();
     }
 }
