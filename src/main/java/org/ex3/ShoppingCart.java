@@ -2,9 +2,9 @@ package org.ex3;
 
 import lombok.Data;
 import org.ex1.Client;
-import org.ex4.Tuple;
 
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 @Data
@@ -34,5 +34,5 @@ public abstract class ShoppingCart {
         return strategy.applyDiscount(price);
     }
 
-    public abstract List<Tuple<String, Integer>> getWaitingComponents();
+    public abstract Iterator<ComponentInShoppingCart> waitingComponents();
 }

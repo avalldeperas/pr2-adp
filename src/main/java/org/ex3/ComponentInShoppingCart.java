@@ -13,7 +13,7 @@ public class ComponentInShoppingCart {
         return component.getPrice() * units;
     }
 
-    public Tuple<String, Integer> getTupleComponent() {
-        return new Tuple<>(component.getName(), units);
-    }
+//    public Tuple<String, Integer> getTupleComponent() {
+//        return new Tuple<>(component.getName(), units);
+//    }
 }
